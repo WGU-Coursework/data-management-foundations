@@ -1,3 +1,10 @@
+# Connecting to the running Databases
+
+```
+docker run -it --rm --network host mysql:latest mysql -h 127.0.0.1 -P 3306 -u root -p
+docker run -it --rm --network host postgres:latest psql -h 127.0.0.1 -p 5432 -U postgres -d exam_db
+```
+
 # Exam Practice Databases
 
 This project sets up MySQL and PostgreSQL databases using Docker Compose for data management exam practice. The databases are pre-configured with a `students` table for practice queries. This setup uses Docker to run client connections, eliminating the need to install MySQL or PostgreSQL clients on your system. Sensitive credentials are managed via a `.env` file.
